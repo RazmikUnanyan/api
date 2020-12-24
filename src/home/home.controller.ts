@@ -4,7 +4,7 @@ import { UpdateHomeDto } from './dto/update-home.dto';
 import { HomeService } from './home.service';
 import { Home } from './schemas/home.schema';
 
-@Controller('home')
+@Controller('home/header')
 export class HomeController {
   constructor(private readonly homeServise: HomeService ) {
   }
