@@ -19,7 +19,6 @@ export class HomeController {
   }
   @Post()
   @HttpCode(HttpStatus.CREATED)
-  @Header('Cache-Control', 'none')
   create(@Body() createHomeDto: CreateHomeDto): Promise<Home> {
     return this.homeServise.create(createHomeDto);
   }
