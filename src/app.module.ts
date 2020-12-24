@@ -6,7 +6,8 @@ import { HomeMadule } from './home/home.madule';
 
 
 @Module({
-  imports: [HomeMadule,
+  imports: [
+    HomeMadule,
     MongooseModule.forRoot(`mongodb+srv://cynops:cynops1234@cluster0.eglkq.mongodb.net/cynops?retryWrites=true&w=majority`)
   ],
   controllers: [AppController],
