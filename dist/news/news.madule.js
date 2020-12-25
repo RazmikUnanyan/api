@@ -6,25 +6,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.NewsMadule = void 0;
 const common_1 = require("@nestjs/common");
+const news_service_1 = require("./news.service");
+const news_controller_1 = require("./news.controller");
 const mongoose_1 = require("@nestjs/mongoose");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const home_madule_1 = require("./home/home.madule");
-const news_madule_1 = require("./news/news.madule");
-let AppModule = class AppModule {
+const news_schema_1 = require("./schemas/news.schema");
+let NewsMadule = class NewsMadule {
 };
-AppModule = __decorate([
+NewsMadule = __decorate([
     common_1.Module({
+        providers: [news_service_1.NewsService],
+        controllers: [news_controller_1.NewsController],
         imports: [
-            home_madule_1.HomeMadule,
-            news_madule_1.NewsMadule,
-            mongoose_1.MongooseModule.forRoot(`mongodb+srv://cynops:cynops1234@cluster0.eglkq.mongodb.net/cynops?retryWrites=true&w=majority`)
-        ],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+            mongoose_1.MongooseModule.forFeature([
+                { name: news_schema_1.News.name, schema: news_schema_1.NewsSchema }
+            ])
+        ]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], NewsMadule);
+exports.NewsMadule = NewsMadule;
+//# sourceMappingURL=news.madule.js.map

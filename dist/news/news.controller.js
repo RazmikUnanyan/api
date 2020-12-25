@@ -12,29 +12,29 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HomeController = void 0;
+exports.NewsController = void 0;
 const common_1 = require("@nestjs/common");
-const create_home_dto_1 = require("./dto/create-home.dto");
-const update_home_dto_1 = require("./dto/update-home.dto");
-const home_service_1 = require("./home.service");
-let HomeController = class HomeController {
-    constructor(homeServise) {
-        this.homeServise = homeServise;
+const create_news_dto_1 = require("./dto/create-news.dto");
+const update_news_dto_1 = require("./dto/update-news.dto");
+const news_service_1 = require("./news.service");
+let NewsController = class NewsController {
+    constructor(newsServise) {
+        this.newsServise = newsServise;
     }
     getAll() {
-        return this.homeServise.getAll();
+        return this.newsServise.getAll();
     }
     getOne(id) {
-        return this.homeServise.getById(id);
+        return this.newsServise.getById(id);
     }
     create(createHomeDto) {
-        return this.homeServise.create(createHomeDto);
+        return this.newsServise.create(createHomeDto);
     }
     remove(id) {
-        return this.homeServise.remove(id);
+        return this.newsServise.remove(id);
     }
     update(updateHomeDto, id) {
-        return this.homeServise.update(id, updateHomeDto);
+        return this.newsServise.update(id, updateHomeDto);
     }
 };
 __decorate([
@@ -42,39 +42,39 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], HomeController.prototype, "getAll", null);
+], NewsController.prototype, "getAll", null);
 __decorate([
     common_1.Get(':id'),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
-], HomeController.prototype, "getOne", null);
+], NewsController.prototype, "getOne", null);
 __decorate([
     common_1.Post(),
     common_1.HttpCode(common_1.HttpStatus.CREATED),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_home_dto_1.CreateHomeDto]),
+    __metadata("design:paramtypes", [create_news_dto_1.CreateNewsDto]),
     __metadata("design:returntype", Promise)
-], HomeController.prototype, "create", null);
+], NewsController.prototype, "create", null);
 __decorate([
     common_1.Delete(':id'),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
-], HomeController.prototype, "remove", null);
+], NewsController.prototype, "remove", null);
 __decorate([
     common_1.Put(':id'),
     __param(0, common_1.Body()), __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [update_home_dto_1.UpdateHomeDto, String]),
+    __metadata("design:paramtypes", [update_news_dto_1.UpdateNewsDto, String]),
     __metadata("design:returntype", Promise)
-], HomeController.prototype, "update", null);
-HomeController = __decorate([
-    common_1.Controller('home/header'),
-    __metadata("design:paramtypes", [home_service_1.HomeService])
-], HomeController);
-exports.HomeController = HomeController;
-//# sourceMappingURL=home.controller.js.map
+], NewsController.prototype, "update", null);
+NewsController = __decorate([
+    common_1.Controller('home/news'),
+    __metadata("design:paramtypes", [news_service_1.NewsService])
+], NewsController);
+exports.NewsController = NewsController;
+//# sourceMappingURL=news.controller.js.map

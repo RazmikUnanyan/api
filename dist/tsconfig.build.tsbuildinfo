@@ -1557,7 +1557,7 @@
         "affectsGlobalScope": false
       },
       "../src/home/home.controller.ts": {
-        "version": "42b66bd3104122848a60b273ef92a019f50f5d2ec2fbaa4bf38de3483d29da3c",
+        "version": "5348cb14282d19585878588799dccc95329cba45e248082b1c18f00b4b8a9be9",
         "signature": "6d4c8fcbddda31cdb9c6dfe183209155ed2632eccc26f6a5b2da08ee03764f1e",
         "affectsGlobalScope": false
       },
@@ -1566,8 +1566,38 @@
         "signature": "dcc471d87351eac59c15075a5579d2da56a96d6e2b39134315eaf88825c91242",
         "affectsGlobalScope": false
       },
+      "../src/news/dto/create-news.dto.ts": {
+        "version": "4f986e747ac982d9ea4a8c6e4638cff1ffdc2ed70b28e5c7c1a1bfd931841292",
+        "signature": "282bcdd1339b5b254bd500c124a3644fa882b055c2961761f83483713602b4c7",
+        "affectsGlobalScope": false
+      },
+      "../src/news/schemas/news.schema.ts": {
+        "version": "528a11eb36ba0f6f9e9e459db7923e230dd33880686386a2b2097445ba587554",
+        "signature": "93fe25d68e5b269d9efa8b1ca3448ad7a1c6bdebeddd2b26638b3951c5a7ea43",
+        "affectsGlobalScope": false
+      },
+      "../src/news/dto/update-news.dto.ts": {
+        "version": "0c9ee8645e4702b45dfd6e140d4ac761ec9e7fa211def74831c10370d633a0c2",
+        "signature": "d234ecdb5d731c237f1be5891040cb586034d0d9398fba8fb008ac4f541fb5e8",
+        "affectsGlobalScope": false
+      },
+      "../src/news/news.service.ts": {
+        "version": "5df987e3f2af8b1cf12d7e0303922b900f281765a65756a2aa29ee955b0c3581",
+        "signature": "9a1fa5bcf6d88017f900fdf7d3991fa58177fb6d1b015346bc63fa7ef14f5d37",
+        "affectsGlobalScope": false
+      },
+      "../src/news/news.controller.ts": {
+        "version": "e36550eb16bb35c34687274d3d8a333bda37e58a4c5ec5725c64c1f02912a3e4",
+        "signature": "7cc2c85eadbfe4cc23aa17d7c28e5a15b9f53da88967e853c3d52ff50dfbd080",
+        "affectsGlobalScope": false
+      },
+      "../src/news/news.madule.ts": {
+        "version": "29029a847ff953d77b6a5cad750e9d6c460be58a7192530ca9d59743364e94a3",
+        "signature": "95ebb274bfd0ae1c3b355a2c50089d579bdc1ce25776582044be300f8ed7ee68",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "45a9ecd419184615905bafa9c8cf6f4590647f0dee29c55851f44210abf5b19c",
+        "version": "ae35d2d364eba63f12d7de71f0fd1484284c6ee0f5816bf97edc004867a5f917",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -1752,7 +1782,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "4fbeba8e23fe55ab5a9bb060a7f1d51fe981ce2ab301f482561b6d95fa6d4c2c",
+        "version": "9a753926ce67069f23956e94dfef64fe62d86f24b154b97b0f3e505d1e32b318",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
@@ -3446,7 +3476,8 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/home/home.madule.ts"
+        "../src/home/home.madule.ts",
+        "../src/news/news.madule.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -3480,6 +3511,32 @@
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts"
+      ],
+      "../src/news/news.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/news/dto/create-news.dto.ts",
+        "../src/news/dto/update-news.dto.ts",
+        "../src/news/news.service.ts",
+        "../src/news/schemas/news.schema.ts"
+      ],
+      "../src/news/news.madule.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/news/news.controller.ts",
+        "../src/news/news.service.ts",
+        "../src/news/schemas/news.schema.ts"
+      ],
+      "../src/news/news.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/news/dto/create-news.dto.ts",
+        "../src/news/dto/update-news.dto.ts",
+        "../src/news/schemas/news.schema.ts"
+      ],
+      "../src/news/schemas/news.schema.ts": [
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -4855,6 +4912,21 @@
       ],
       "../src/home/schemas/home.schema.ts": [
         "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/news/news.controller.ts": [
+        "../src/news/dto/create-news.dto.ts",
+        "../src/news/dto/update-news.dto.ts",
+        "../src/news/news.service.ts",
+        "../src/news/schemas/news.schema.ts"
+      ],
+      "../src/news/news.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/news/dto/create-news.dto.ts",
+        "../src/news/dto/update-news.dto.ts",
+        "../src/news/schemas/news.schema.ts"
+      ],
+      "../src/news/schemas/news.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -5270,7 +5342,13 @@
       "../src/home/home.madule.ts",
       "../src/home/home.service.ts",
       "../src/home/schemas/home.schema.ts",
-      "../src/main.ts"
+      "../src/main.ts",
+      "../src/news/dto/create-news.dto.ts",
+      "../src/news/dto/update-news.dto.ts",
+      "../src/news/news.controller.ts",
+      "../src/news/news.madule.ts",
+      "../src/news/news.service.ts",
+      "../src/news/schemas/news.schema.ts"
     ]
   },
   "version": "4.1.3"
